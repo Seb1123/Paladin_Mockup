@@ -1,0 +1,306 @@
+*{
+    /* Positional: Parent */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    /* Positional: Parent */
+    min-height: 100vh;
+    width: 100%;
+    
+    /* Positional: Content */
+    display: flex;
+    flex-flow: column nowrap;
+
+    /* Stylistic */
+    overflow: auto;
+}
+
+.container {
+    /* Positional: Parent */
+    width: 100%;
+}
+
+.container.header{
+    /* Positional: Content */
+    display: flex;
+    flex-flow: column nowrap;   
+
+    /* Stylistic */
+    background-color: black;
+} 
+nav {
+    /* Positional: Content */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Stylistic */
+    color: white;
+} .nav-left{
+    /* Positional: Parent */
+    padding: 3vh 3vw;
+
+    /* Positional: Content */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap:  3vw;
+} .nav-left img{
+    /* Positional: Parent */
+    height: calc(100px + 0.5vh);
+    width: auto;
+    border-radius: 50%;
+} .nav-left-title{
+    /* Positional: Content */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}.nav-left-title h2{
+    /* Stylistic */
+    font-weight: 900;
+    font-size: calc(1.25rem + 3.5vw);
+    letter-spacing: calc(0.25rem + 0.1vw);
+} .nav-left-title p{
+    /* Positional: Parent */
+    align-self: center;
+
+    /* Stylistic */
+    font-style: italic;
+}nav ul{
+    /* Positional: Parent */
+    align-self: stretch;
+
+    /* Positional: Content */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+
+    /* Stylistic */
+    font-weight: 100;
+    font-size: calc(1rem + 0.25vw);
+} nav ul li{
+    /* Positional: Content */
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    /* Stylistic */
+    list-style-type: none;    
+} nav ul li button{
+    /* Stylistic */
+    background-color: black;
+    box-shadow: 0rem -0.1rem .55rem 0rem white,            /*****************/
+                0rem -1rem .75rem 0rem lightgray,        /**** IMPROVE ****/
+                0rem -1rem 1rem 0rem darkgray;           /*****************/
+} nav ul li button a{
+    /* Positional: Parent */
+    padding: 0 1.5vw;
+
+    /* Stylistic */
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    font-size: calc(0.75rem + 0.25vw);
+} ul li:last-of-type a {
+    padding: 0 0.75vw;
+} li:hover, li:focus {
+    box-shadow: -.55rem 0rem 4.5rem 0rem white,
+                0rem 0rem 1.5rem 0rem lightgray,
+                0rem 0rem 1.5rem 0rem darkgray;
+    transition: 0.5s;
+}
+
+.container.middle {
+    /* Positional: Parent */
+    flex: 1 0 auto;
+
+    /* Positional: Content */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: calc(1rem + 5vh) ;
+}
+section#hero {
+    padding: calc(1rem + 5vh) 3vw 0 3vw;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: white;
+
+    flex: 1 0 auto;
+} #hero .images {
+    /* Positional: Parent */
+    width: 100%;
+    max-height: 20vh; 
+
+    /* Positional: Content */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    flex: 1 0 auto;
+} #hero .images img{
+    width: 30vw;
+    max-width: 450px;
+    height: 20vh;
+    max-height: 300px;
+
+    flex: 1 1 auto;
+}
+section#about {
+    /* Positional: Content */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: calc(2rem + 3vh);
+} #about h2 {
+    /* Positional: Parent */
+    margin-top: 5vh;
+
+    /* Stylistic */
+    font-size: calc(3rem + 2vw);
+    letter-spacing: calc(0.25rem + 0.1vw);
+} #about p {
+    /* Stylistic */
+    font-size: calc(16px + 0.25vw);
+}
+section#services {
+    /* Positional: Content */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: calc(2rem + 3vh);
+} #services h2 {
+    /* Positional: Parent */
+    margin-top: 5vh;
+
+    /* Stylistic */
+    font-size: calc(3rem + 2vw);
+    letter-spacing: calc(0.25rem + 0.1vw);
+} #services .service {
+    /* Positional: Parent */
+    min-width: 600px;
+    width: 60%;
+    min-height: 200px;
+    height: 20vh;
+
+    /* Positional: Content */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Stylistic */
+    box-shadow: 0px 0px 5px 0px gray;
+    /* border: 2px solid grey; */
+} .details {
+    padding: 0 2vw 0 2vw;
+} .business .details{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: calc(1rem + 0.2vh);
+} .business img {
+    height: 100%;
+}.event .details{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: calc(1rem + 0.2vh);
+} .event img {
+    height: 100%;
+}.individual .details{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: calc(1rem + 0.2vh);
+} .individual img {
+    height: 100%;
+}.details button {
+    align-self: center;
+}
+section#testimonial{
+    /* Positional: Content */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: calc(3.25rem + 5vh);
+    padding-bottom: calc(1rem + 5vh);
+} #testimonial h2 {
+    /* Positional: Parent */
+    margin-top: 5vh;
+
+    /* Stylistic */
+    font-size: calc(3rem + 2vw);
+    letter-spacing: calc(0.25rem + 0.1vw);
+} #testimonial .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+} #testimonial .container .test {
+    /* Positional: Parent */
+    width: 15%;
+    height: 25%;
+
+    /* Positional: Content */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: calc(1rem + 1vh);
+} #testimonial .container .test .quote {
+    /* Stylistic */
+    font-style: italic;
+} #testimonial .container .test .person {
+    /* Positional: Parent */
+    align-self: flex-start;
+    /* Stylistic */
+    font-weight: 900;
+}
+
+.container.footer {
+    /* Positional: Parent */
+    padding: 3vh 3vw;
+
+    /* Positional: Content */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: black;
+    color: white;
+}
+section#contact {
+    /* Positional: Content */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: calc(0.5rem + 0.5vh);
+} #contact h2 {
+    font-size: calc(1rem + 0.75vw);
+    letter-spacing: calc(0.10rem + 0.05vw);
+}#contact .contact {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: calc(0.5rem + 0.5vh);
+}.contact p {
+    font-weight: 900;
+}
+
+
+
